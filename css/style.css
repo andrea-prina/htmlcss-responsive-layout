@@ -3,3 +3,134 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --main-color1: #B5DDFF;
+    --secondary-color1: #0084FD;
+    --main-color2:#9792E4;
+    --secondary-color2: #FFF;
+}
+
+/* COMMONS */
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 15px;
+    /* TODO Da rimuovere */
+    /* height: 300px;
+    border: 1px solid yellow; */
+}
+
+
+.flex-div {
+    display: flex;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.ai-ce {
+    align-items: center;
+}
+
+.bgc-1 {
+    background-color: var(--main-color2);
+}
+
+.bgc-2 {
+    background-color: var(--secondary-color2);
+}
+
+.txc-1 {
+    color: #FFF;
+}
+
+.txc-2 {
+    color: #000;
+}
+
+.btn-shape {
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+
+
+/* HEADER */
+.head {
+    height: 50px;
+    background-color: var(--secondary-color1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* TODO: Da rivedere */
+.head > .container {
+    height: 100%;
+}
+
+.head img {
+    height: 35px;
+}
+/* */
+
+
+nav {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0px 5px;
+
+}
+nav a {
+    text-decoration: none;
+    padding: 0px 5px;
+
+}
+
+
+/* MAIN */
+
+main {
+    margin-top: 40px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+    /* TODO Da rimuovere */
+    height: 400px;
+}
+
+
+
+
+/* MEDIA QUERY | TABLET */
+@media all and (min-width: 768px){
+
+}
+
+/* MEDIA QUERY | DESKTOP */
+@media all and (min-width: 992px){
+
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+}
