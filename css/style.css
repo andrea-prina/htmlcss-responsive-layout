@@ -23,10 +23,19 @@
     border: 1px solid yellow; */
 }
 
+p {
+    margin: 20px 0px;
+}
+
+h2 {
+    margin: 20px 0px;
+}
+
 
 .flex-div {
     display: flex;
 }
+
 
 .jc-sb {
     justify-content: space-between;
@@ -44,6 +53,10 @@
     background-color: var(--secondary-color2);
 }
 
+.bgc-3 {
+    background-color: var(--secondary-color1);
+}
+
 .txc-1 {
     color: #FFF;
 }
@@ -52,9 +65,14 @@
     color: #000;
 }
 
+.txt-c {
+    text-align: center;
+}
+
 .btn-shape {
     border-radius: 15px;
     padding: 5px 10px;
+    margin: 100px 0px;
 }
 
 
@@ -69,7 +87,6 @@
     right: 0;
 }
 
-/* TODO: Da rivedere */
 .head > .container {
     height: 100%;
 }
@@ -77,8 +94,6 @@
 .head img {
     height: 35px;
 }
-/* */
-
 
 nav {
     display: none;
@@ -106,12 +121,49 @@ main {
     margin-top: 40px;
 }
 
+section {
+    padding: 40px 0px 40px 0px;
+}
+
+/* FEATURES */
+
+#features > .container {
+    flex-direction: column;
+}
+
+.card {
+    width: 80%;
+    margin: 20px auto;
+    background-color: var(--main-color1);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.card.wide {
+    flex-direction: column;
+    padding-bottom: 0px;
+}
+
+.wide img {
+    margin-top: 40px;
+}
+
+
+
+/* BENEFITS */
+#benefits {
+    text-align: center;
+}
+
+#benefits > .container {
+    flex-direction: column;
+}
+
+
 /* FOOTER */
 
 footer {
     background-color: black;
-    /* TODO Da rimuovere */
-    height: 400px;
 }
 
 
@@ -119,6 +171,25 @@ footer {
 
 /* MEDIA QUERY | TABLET */
 @media all and (min-width: 768px){
+
+    #features > .container, #benefits > .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #features .card {
+        margin: 15px;
+        width: calc((100% - 15px * 2 * 3) / 3);
+    }
+
+    #benefits .card {
+        margin: 15px;
+        width: calc((100% - 15px * 2 * 2) / 2);
+    }
+
+    #features .card.wide {
+        width: calc((100% - 15px * 2 * 3) / 1.5 + 30px);
+    }
 
 }
 
@@ -132,5 +203,24 @@ footer {
     nav {
         display: block;
     }
+
+    .card.wide {
+        flex-direction: row;
+    }
+
+    .wide > div {
+        width: 50%;
+    }
+
+    .wide > img {
+        width: 30%;
+        margin-left: 40px;
+    }
+
+
+    #benefits .card {
+        width: calc((100% - 15px * 2 * 3) / 3);
+    }
+
 
 }
