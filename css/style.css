@@ -27,7 +27,6 @@
 }
 
 
-
 .flex-div {
     display: flex;
 }
@@ -83,6 +82,10 @@
     color: var(--secondary-color1);
 }
 
+.txc-4 {
+    color: var(--main-color2);
+}
+
 
 
 /* TEXT FORMATTING */
@@ -98,6 +101,8 @@ h1 {
 
 h2 {
     margin: 30px 0px;
+    font-weight: 700;
+    font-size: 36px;
 }
 
 h3 {
@@ -168,7 +173,7 @@ section {
 
 .card {
     margin: 20px auto;
-    padding: 20px;
+    padding: 30px;
     border-radius: 20px;
 }
 
@@ -200,6 +205,13 @@ section {
     flex-direction: column;
 }
 
+.circle {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    padding: 10px 15px;
+}
+
 /* TESTIMONIALS */
 
 #testimonial .card {
@@ -207,12 +219,17 @@ section {
     align-items: center;
 }
 
+
 #testimonial img {
     /* TODO Sistemare per rendere dinamica */
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 100%;
+}
+
+.big-txt {
+    font-size: 18px;
 }
 
 /* BENEFITS */
@@ -291,6 +308,11 @@ footer {
         align-items: center;
     }
 
+    #testimonial .card > div {
+        margin-left: 20px;
+        text-align: left;
+    }
+
     #about-us > .container {
         flex-direction: row;
     }
@@ -336,6 +358,7 @@ footer {
     #plannings .container {
         flex-direction: row;
     }
+
 
     #plannings .card {
         align-self: flex-end;
