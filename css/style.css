@@ -15,12 +15,13 @@
 
 .container {
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
     max-width: 1000px;
     border-radius: 15px;
-    /* TODO Da rimuovere */
-    /* height: 300px;
-    border: 1px solid yellow; */
+}
+
+.sub-container {
+    margin: 0 auto;
 }
 
 p {
@@ -73,8 +74,9 @@ h2 {
     border-radius: 15px;
     padding: 5px 10px;
     margin: 100px 0px;
+    /* TODO Da rimuovere per gestire con classi colore */
+    background-color: yellow;
 }
-
 
 
 /* HEADER */
@@ -85,6 +87,7 @@ h2 {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 2;
 }
 
 .head > .container {
@@ -132,7 +135,6 @@ section {
 }
 
 .card {
-    width: 80%;
     margin: 20px auto;
     background-color: var(--main-color1);
     padding: 20px;
@@ -146,9 +148,35 @@ section {
 
 .wide img {
     margin-top: 40px;
+    max-width: 230px;
 }
 
 
+/* PLANNINGS */
+
+#plannings img {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+#plannings .container {
+    flex-direction: column;
+}
+
+/* TESTIMONIALS */
+
+#testimonial .card {
+    flex-direction: column;
+    align-items: center;
+}
+
+#testimonial img {
+    /* TODO Sistemare per rendere dinamica */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+}
 
 /* BENEFITS */
 #benefits {
@@ -159,11 +187,41 @@ section {
     flex-direction: column;
 }
 
+/* ABOUT US */
+#about-us > .container {
+    flex-direction: column;
+}
+
+.about-img {
+    border-radius: 100%;
+    background-image: url(../img/about.jpg);
+    background-size: cover;
+    /* TODO Sistemare per rendere dinamica */
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.relative-txt {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/* GET STARTED */
+#get-started > .container {
+    text-align: center;
+}
+
 
 /* FOOTER */
 
 footer {
     background-color: black;
+    color: white;
+    padding: 20px 0px;
+    text-align: center;
 }
 
 
@@ -191,6 +249,23 @@ footer {
         width: calc((100% - 15px * 2 * 3) / 1.5 + 30px);
     }
 
+    #testimonial .card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #about-us > .container {
+        flex-direction: row;
+    }
+
+    #about-us .left-col {
+        width: 80%;
+    }
+
+    #about-us .right-col {
+        width: 20%;
+    }
+
 }
 
 /* MEDIA QUERY | DESKTOP */
@@ -213,13 +288,20 @@ footer {
     }
 
     .wide > img {
-        width: 30%;
         margin-left: 40px;
     }
 
 
     #benefits .card {
         width: calc((100% - 15px * 2 * 3) / 3);
+    }
+
+    #plannings .container {
+        flex-direction: row;
+    }
+
+    #plannings .card {
+        align-self: flex-end;
     }
 
 
