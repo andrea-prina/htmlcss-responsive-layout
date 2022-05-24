@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -24,13 +26,6 @@
     margin: 0 auto;
 }
 
-p {
-    margin: 20px 0px;
-}
-
-h2 {
-    margin: 20px 0px;
-}
 
 
 .flex-div {
@@ -46,6 +41,19 @@ h2 {
     align-items: center;
 }
 
+
+.btn-shape {
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 100px 0px;
+}
+
+.no-line {
+    text-decoration: none;
+}
+
+
+/* BACKGROUND COLORS */
 .bgc-1 {
     background-color: var(--main-color2);
 }
@@ -58,6 +66,11 @@ h2 {
     background-color: var(--secondary-color1);
 }
 
+.bgc-4 {
+    background-color: var(--main-color1);
+}
+
+/* TEXT COLORS */
 .txc-1 {
     color: #FFF;
 }
@@ -66,16 +79,35 @@ h2 {
     color: #000;
 }
 
-.txt-c {
-    text-align: center;
+.txc-3 {
+    color: var(--secondary-color1);
 }
 
-.btn-shape {
-    border-radius: 15px;
-    padding: 5px 10px;
-    margin: 100px 0px;
-    /* TODO Da rimuovere per gestire con classi colore */
-    background-color: yellow;
+
+
+/* TEXT FORMATTING */
+
+p {
+    margin: 30px 0px;
+}
+
+
+h1 {
+    margin: 30px 0px;
+}
+
+h2 {
+    margin: 30px 0px;
+}
+
+h3 {
+    margin: 30px 0px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.txt-c {
+    text-align: center;
 }
 
 
@@ -136,7 +168,6 @@ section {
 
 .card {
     margin: 20px auto;
-    background-color: var(--main-color1);
     padding: 20px;
     border-radius: 20px;
 }
@@ -150,6 +181,12 @@ section {
     margin-top: 40px;
     max-width: 230px;
 }
+
+.card-ico {
+    font-size: 72px;
+    color: var(--secondary-color1);
+}
+
 
 
 /* PLANNINGS */
